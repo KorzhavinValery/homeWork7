@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
 
 
     }
@@ -33,6 +34,20 @@ public class Main {
         System.out.println();
         for (; number > 0; number--) {
             System.out.print(number);
+        }
+        System.out.println();
+    }
+
+    public static void task3() {
+        System.out.println("Задача 3");
+        int population = 12_000_000;
+        int born = 17;
+        int death = 8;
+        int year = 2023;
+        int naturalGrowth = born - death;
+        for (; year <= 2033; year++) {
+            System.out.println("Год " + year + ", численность населения составляет " + population);
+            population += population * naturalGrowth / 1000;
         }
     }
 }
